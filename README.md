@@ -4,7 +4,7 @@ GitHub repo issues viewer as a kanban board
 
 ## Get started
 
-Run the application locally or visit the [demo page](http://localhost:3000).
+Run the application locally or visit the [demo page](https://daminort.github.io/github-kanban).
 
 To run locally:
 

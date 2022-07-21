@@ -2,7 +2,11 @@
   "name": "github-kanban",
   "version": "0.1.0",
   "private": true,
-  "home": "https://daminort.github.io/github-kanban",
+  "homepage": "/github-kanban/",
+  "repository": {
+    "type": "git",
+    "url": "https://daminort.github.io/github-kanban"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
