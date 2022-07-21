@@ -27,7 +27,7 @@ const Form: FC = () => {
 
     refreshAll(list);
     refreshRepo(repo);
-  }, [url, token, refreshAll]);
+  }, [url, token, refreshAll, refreshRepo]);
 
   return (
     <LibForm onSubmit={onSubmit}>

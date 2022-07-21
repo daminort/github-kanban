@@ -17,6 +17,7 @@ const initValue: IssuesContext = {
   refreshList: () => {},
   refreshAll: () => {},
   refreshRepo: () => {},
+  reorderIssues: () => {},
 }
 
 const issuesContext = createContext<IssuesContext>(initValue);
