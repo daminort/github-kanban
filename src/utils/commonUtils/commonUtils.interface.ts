@@ -1,4 +1,4 @@
-import { Issue, IssueStatus } from 'interfaces/issue.interface';
+import { Issue, IssueStatus, ShortIssueStatus } from 'interfaces/issue.interface';
 
 interface RepoInfo {
   owner: string;
@@ -7,7 +7,16 @@ interface RepoInfo {
 
 type IssueLists = Record<IssueStatus, Issue[]>;
 
+interface OrderInfo {
+  s: ShortIssueStatus;
+  o: number;
+}
+
+type OrderMap = Record<string, OrderInfo>;
+
 export type {
   RepoInfo,
   IssueLists,
+  OrderInfo,
+  OrderMap,
 }

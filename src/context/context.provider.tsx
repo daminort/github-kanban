@@ -47,13 +47,15 @@ const IssuesProvider: FC<ProviderProps> = ({ children }) => {
       progress,
       done,
     };
-    
+
     const result = commonUtils.moveIssue(info, lists);
 
     refreshList(result.backlog, 'backlog');
     refreshList(result.progress, 'progress');
     refreshList(result.done, 'done');
-  }, [backlog, progress, done, refreshList]);
+
+    commonUtils.storeOrder(repo.repoURL, result);
+  }, [backlog, progress, done, repo, refreshList]);
 
   const value = {
     backlog,

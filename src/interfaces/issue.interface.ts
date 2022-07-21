@@ -1,5 +1,6 @@
 type IssueState = 'open' | 'closed';
 type IssueStatus = 'backlog' | 'progress' | 'done';
+type ShortIssueStatus = 'b' | 'p' | 'd';
 
 interface Issue {
   id: number;
@@ -15,5 +16,6 @@ interface Issue {
 export type {
   IssueState,
   IssueStatus,
+  ShortIssueStatus,
   Issue,
 }

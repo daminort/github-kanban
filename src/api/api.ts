@@ -10,7 +10,7 @@ async function getIssues(owner: string, repoName: string, token: string = ''): P
     'Accept': 'application/vnd.github+json',
   };
   if (token) {
-    headers.Authorization = token;
+    headers.Authorization = `token: ${token}`;
   };
 
   const response: AxiosResponse<IssueDto[]> = await axios.get(url, {

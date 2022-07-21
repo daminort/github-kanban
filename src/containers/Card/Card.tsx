@@ -4,7 +4,6 @@ import { Draggable } from 'react-beautiful-dnd';
 
 import { useIssue } from 'context';
 import { CardProps } from './Card.props';
-import s from './Card.module.css';
 
 const Card: FC<CardProps> = ({ id }) => {
   const issue = useIssue(id);
@@ -26,7 +25,9 @@ const Card: FC<CardProps> = ({ id }) => {
           <LibCard className="w-100 mb-2">
             <LibCard.Body>
               <LibCard.Title className="fs-6">{title}</LibCard.Title>
-              <LibCard.Text className={s.details}>{info}</LibCard.Text>
+              <LibCard.Text className="fs-6 text-muted">
+                <small>{info}</small>
+              </LibCard.Text>
             </LibCard.Body>
           </LibCard>
         </div>

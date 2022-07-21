@@ -11,7 +11,7 @@ import { useAuthToken } from 'hooks/useAuthToken';
 
 const Form: FC = () => {
 
-  const [url, setURL] = useState<string>('https://github.com/nodejs/diagnostics');
+  const [url, setURL] = useState<string>('');
   const { refreshAll, refreshRepo } = useIssuesContext();
 
   const token = useAuthToken();
@@ -25,7 +25,9 @@ const Form: FC = () => {
     const { owner, repoName } = commonUtils.parseURL(url);
     const { list, repo } = await api.getIssues(owner, repoName, token);
 
-    refreshAll(list);
+    const orderedList = commonUtils.restoreOrder(repo.repoURL, list);
+
+    refreshAll(orderedList);
     refreshRepo(repo);
   }, [url, token, refreshAll, refreshRepo]);
 
@@ -44,6 +46,13 @@ const Form: FC = () => {
           <Button variant="primary" type="submit" className="w-100">
             Load Issues
           </Button>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <p className="fs-6 text-muted mt-1 mx-1">
+            <small>Please, enter the full URL of the repo. For example: <strong>https://github.com/nodejs/diagnostics</strong></small>
+          </p>
         </Col>
       </Row>
     </LibForm>
