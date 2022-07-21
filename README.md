@@ -1,4 +1,4 @@
-# Kanban: Github issues
+# Kanban: GitHub issues
 
 GitHub repo issues viewer as a kanban board
 
@@ -25,6 +25,15 @@ Then you can enter URL of any GitHub repo you want and get the issues list in th
 
 ### Statuses
 
-- **Backlog** - state of the issue is "open" and no assignee
-- **In Progress** - state of the issue is "open" and there is assignee
-- **Done** - state of the issue is "closed"
+- **Backlog** - state of the issue is `open` and no assignee
+- **In Progress** - state of the issue is `open` and there is assignee
+- **Done** - state of the issue is `closed`
+
+## Technologies and libraries
+
+- [React](https://reactjs.org/) (+ [Context API](https://reactjs.org/docs/context.html))
+- [Typescript](https://www.typescriptlang.org/)
+- [React-Beautiful-DnD](https://github.com/atlassian/react-beautiful-dnd)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
+- [Axios](https://axios-http.com/)
+- [Date-Fns](https://date-fns.org/)
